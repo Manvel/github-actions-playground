@@ -1,0 +1,20 @@
+{
+  "name": "github-actions-playground",
+  "version": "0.0.1",
+  "description": "Github actions playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd dist/;zip -r ../cba.zip .;cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manvel/github-actions-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manvel/github-actions-playground/issues"
+  },
+  "homepage": "https://github.com/Manvel/github-actions-playground#readme"
+}
