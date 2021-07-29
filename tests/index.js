@@ -5,7 +5,7 @@ describe("Basic test", () => {
     strictEqual(1, 1);
   });
 
-  it("EXAMPLE_VAR variable is passed", () => {
+  it("EXAMPLE_VAR env variable has value of 'Example value'", () => {
     strictEqual(process.env.EXAMPLE_VAR, "Example value");
   });
 });
