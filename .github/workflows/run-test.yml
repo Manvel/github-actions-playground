@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      - EXAMPLE_VAR: ${{ secrets.EXAMPLE_VAR }}
+      EXAMPLE_VAR: ${{ secrets.EXAMPLE_VAR }}
 
     steps:
       - uses: actions/checkout@v2
