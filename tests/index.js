@@ -6,6 +6,6 @@ describe("Basic test", () => {
   });
 
   it("EXAMPLE_VAR variable is passed", () => {
-    ok(process.env.EXAMPLE_VAR);
+    strictEqual(process.env.EXAMPLE_VAR, "Example value");
   });
 });
