@@ -19,10 +19,13 @@ jobs:
       - name: Prepare modules
         run: npm install
 
-      - name: Get GITHUB_CONTEXT
-        run: echo "$GITHUB_CONTEXT"
-        env: 
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
+      - name: Run push
+        if: ${{ github.event_name == "push"  }}
+        run: echo "Running push event"
+        
+      - name: Run Schedule
+        if: ${{ github.event_name == "schedule"  }}
+        run: echo "Running schedule"
 
       - name: Run tests
         run: npm test
