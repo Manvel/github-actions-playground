@@ -19,5 +19,10 @@ jobs:
       - name: Prepare modules
         run: npm install
 
+      - name: Get GITHUB_CONTEXT
+        run: echo "$GITHUB_CONTEXT"
+        env: 
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+
       - name: Run tests
         run: npm test
