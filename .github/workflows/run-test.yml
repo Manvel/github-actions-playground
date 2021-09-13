@@ -20,11 +20,11 @@ jobs:
         run: npm install
 
       - name: Run push
-        if: ${{ github.event_name == "push"  }}
+        if: ${{ github.event_name == 'push'  }}
         run: echo "Running push event"
         
       - name: Run Schedule
-        if: ${{ github.event_name == "schedule"  }}
+        if: ${{ github.event_name == 'schedule'  }}
         run: echo "Running schedule"
 
       - name: Run tests
