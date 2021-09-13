@@ -1,6 +1,6 @@
 name: Run tests
 
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   tests:
@@ -18,6 +18,14 @@ jobs:
 
       - name: Prepare modules
         run: npm install
+
+      - name: Run push
+        if: ${{ github.event_name == 'push'  }}
+        run: echo "Running push event"
+        
+      - name: Run Schedule
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        run: echo "Running schedule"
 
       - name: Run tests
         run: npm test
